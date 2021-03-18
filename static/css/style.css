@@ -6,6 +6,9 @@
   height: 250px;
   overflow: hidden;
 }
+.carousel-item > img, .carousel{
+  height: 250px !important;
+}
 .flex-container {
   padding: 0;
   margin: 0;

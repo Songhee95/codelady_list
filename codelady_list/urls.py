@@ -21,5 +21,6 @@ from django.contrib import admin
 urlpatterns = [
     path('', include('my_app.urls')),
     path('css/', include('my_app.urls')),
+    path('js/', include('my_app.urls')),
     path('admin/', admin.site.urls),
 ]
