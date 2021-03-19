@@ -1,1 +1,1 @@
-web: gunicorn codelady_list.wsgi --log-file -
+web: bin/start-pgbouncer-stunnel gunicorn codelady_list.wsgi
