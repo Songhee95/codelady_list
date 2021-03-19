@@ -6,12 +6,12 @@
     <div class='row'>
     <h1>getting database</h1>
         {% for post in final_postings %}
-        <h1>hello</h1>
             <div class="col s4">
                 <div class="card">
                     <div class="card-image carousel carousel-slider center">
-                        {% for url in post.3 %}
-                            <a class="carousel-item" href="/"><img src="{{ url }}" /></a>
+                        {% for getUrl in post.3 %}
+                            <h1>{{ getUrl }}</h1>
+                            <a class="carousel-item" href="/"><img src="{{ getUrl }}" /></a>
                         {% endfor %}
                     </div>
                     <div class="card-content">

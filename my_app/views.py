@@ -34,15 +34,16 @@ def new_search(request):
             post_price = 'N/A'
 
         if post.find(class_='result-image').get('data-ids'):
-            post_image_id = post.find(
-                class_='result-image').get('data-ids').split(',')[0].split(':')[1]
-            post_image_url = BASE_IMAGE_URL.format(post_image_id)
-            print(post_image_url)
+            post_image = post.find(
+                class_='result-image').get('data-ids').split(',')
+            final_image = []
+            for url in post_image:
+                final_image.append((BASE_IMAGE_URL.format(url.split(':')[1])))
         else:
-            post_image_url = 'https://craigslist.org/images/peace.jpg'
+            final_image = ['https://craigslist.org/images/peace.jpg']
 
         final_postings.append(
-            (post_title, post_url, post_price, post_image_url))
+            (post_title, post_url, post_price, final_image))
 
     stuff_for_frontend = {
         'search': search,
