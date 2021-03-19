@@ -45,6 +45,7 @@ def new_search(request):
         final_postings.append(
             (post_title, post_url, post_price, final_image))
 
+    print(final_postings)
     stuff_for_frontend = {
         'search': search,
         'final_postings': final_postings,
