@@ -1,1 +1,1 @@
-web: bin/start-pgbouncer-stunnel gunicorn codelady_list.wsgi
+web: gunicorn codelady_list.wsgi
