@@ -1,1 +1,1 @@
-web: gunicorn codelady_list.wsgi
+web: gunicorn codelady_list.wsgi --log-file -
