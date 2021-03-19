@@ -79,7 +79,7 @@ WSGI_APPLICATION = 'codelady_list.wsgi.application'
 
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.postgresql',
+        'ENGINE': 'django.db.backends.postgresql_psycopg2',
         'NAME': 'dco5dofvg1us3i',
         'HOST': 'ec2-54-161-239-198.compute-1.amazonaws.com',
         'POST': 5432,
@@ -87,6 +87,8 @@ DATABASES = {
         'PASSWORD': 'fb806a82a98132b70b19ffa2e6ef75fa90519cbb90d4496c8617ece243becc9d'
     }
 }
+db_from_env = dj_database_url.config(conn_max_age=500)
+DATABASES['default'].update(db_from_env)
 # Password validation
 # https://docs.djangoproject.com/en/3.1/ref/settings/#auth-password-validators
 
