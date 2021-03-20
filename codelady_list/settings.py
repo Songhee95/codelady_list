@@ -77,15 +77,10 @@ WSGI_APPLICATION = 'codelady_list.wsgi.application'
 
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.postgresql',
-        'NAME': 'dco5dofvg1us3i',
-        'USER': 'jmmeothmujwbtp',
-        'PASSWORD': 'fb806a82a98132b70b19ffa2e6ef75fa90519cbb90d4496c8617ece243becc9d',
-        'HOST': 'ec2-54-161-239-198.compute-1.amazonaws.com',
-        'POST': 5432,
+        'ENGINE': 'django.db.backends.sqlite3',
+        'NAME': os.path.join(BASE_DIR, 'db.sqlite3'),
     }
 }
-
 
 # Password validation
 # https://docs.djangoproject.com/en/3.1/ref/settings/#auth-password-validators
