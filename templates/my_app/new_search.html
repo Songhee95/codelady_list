@@ -1,28 +1,28 @@
 {% extends 'base.html' %} 
 
-{% block content %}
-    <h2 style="text-align: center">{{ search | title}}</h2>
-        
-    <div class='row'>
-        {% for post in final_postings %}
-        <p>hello</p>
-            {% comment %} <div class="col s4">
-                <div class="card">
-                    <div class="card-image carousel carousel-slider center">
-                        {% for getUrl in post.3 %}
-                            <h1>{{ getUrl }}</h1>
-                            <a class="carousel-item" href="/"><img src="{{ getUrl }}" /></a>
-                        {% endfor %}
+    {% block content %}
+        <h2 style="text-align: center">{{ search | title}}</h2>
+            
+        <div class='row'>
+            {% for post in final_postings %}
+            <p>hello</p>
+                {% comment %} <div class="col s4">
+                    <div class="card">
+                        <div class="card-image carousel carousel-slider center">
+                            {% for getUrl in post.3 %}
+                                <h1>{{ getUrl }}</h1>
+                                <a class="carousel-item" href="/"><img src="{{ getUrl }}" /></a>
+                            {% endfor %}
+                        </div>
+                        <div class="card-content">
+                            <p>{{ post.0 }}</p>
+                        </div>
+                        <div class="card-action">
+                            <a href="{{ post.1 }}">View listing: {{ post.2 }}</a>
+                        </div>
                     </div>
-                    <div class="card-content">
-                        <p>{{ post.0 }}</p>
-                    </div>
-                    <div class="card-action">
-                        <a href="{{ post.1 }}">View listing: {{ post.2 }}</a>
-                    </div>
-                </div>
-            </div> {% endcomment %}
-        {% endfor %}
-    </div>
+                </div> {% endcomment %}
+            {% endfor %}
+        </div>
 
-{% endblock content%}
+    {% endblock content%}
