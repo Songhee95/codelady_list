@@ -4,9 +4,9 @@
     <h2 style="text-align: center">{{ search | title}}</h2>
         
     <div class='row'>
-    <h1>getting database</h1>
         {% for post in final_postings %}
-            <div class="col s4">
+        <p>hello</p>
+            {% comment %} <div class="col s4">
                 <div class="card">
                     <div class="card-image carousel carousel-slider center">
                         {% for getUrl in post.3 %}
@@ -21,7 +21,7 @@
                         <a href="{{ post.1 }}">View listing: {{ post.2 }}</a>
                     </div>
                 </div>
-            </div>
+            </div> {% endcomment %}
         {% endfor %}
     </div>
 
